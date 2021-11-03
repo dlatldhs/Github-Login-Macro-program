@@ -8,9 +8,8 @@ import time as t
 
 
 #변수 설정
-name = input("What is your git name??:")
-email = input("What is your git email??:")
-pwd = input("What is your git password??:")
+github_id = input("What is your git id??:")
+github_pwd = input("What is your git password??:")
 driver = webdriver.Chrome('C:\\Users\\SW2126\\Desktop\\Python\\projects\\Macro_programs\\Auto_git\\chromedriver_win32\\chromedriver.exe')
 url = 'https://google.com/'
 
@@ -28,8 +27,12 @@ driver.find_element_by_css_selector('.LC20lb.DKV0Md').click()
 driver.find_element_by_xpath(
     "/html/body/div[1]/header/div/div[2]/div[2]/div[2]/a"
 ).click()
-driver.find_element_by_css_selector('#login_field').send_keys(name)
-driver.find_element_by_css_selector('#password').send_keys(pwd)
+driver.find_element_by_css_selector('#login_field').send_keys(github_id)
+driver.find_element_by_css_selector('#password').send_keys(github_pwd)
+driver.find_element_by_xpath(
+    '//*[@id="login"]/div[4]/form/div/input[12]'
+).click()
+
 '''
 
 old version
