@@ -24,8 +24,12 @@ google_search_box = driver.find_element_by_css_selector('.gLFyf.gsfi')
 
 google_search_box.send_keys('github')
 google_search_box.send_keys(Keys.ENTER)
-driver.find_element_by_css_selector("LC20lb DKV0Md").Click()
-
+driver.find_element_by_css_selector('.LC20lb.DKV0Md').click()
+driver.find_element_by_xpath(
+    "/html/body/div[1]/header/div/div[2]/div[2]/div[2]/a"
+).click()
+driver.find_element_by_css_selector('#login_field').send_keys(name)
+driver.find_element_by_css_selector('#password').send_keys(pwd)
 '''
 
 old version
